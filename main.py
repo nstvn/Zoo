@@ -5,9 +5,21 @@ class Player:
         zoo_rating = 0
 
 
-class Animal:
+class AnimalData:
+    # type_food_eating = ("Grass", 'Meat')
+    # sizeA = ('Small', "Middle", "Big")
+    # food_amount = (5, 10, 15)
+    # rare = (1, 2, 3, 4, 5)
+    # habitat = ('Water', 'Ground')
+
+    Tiger = ('Meat', 'Middle', 10, 5, 'Ground')
+    Elephant = ('Grass', 'Big', 5, 3, 'Ground')
+
+
+class Animal(AnimalData):
     def __init__(self):
-        self.type_food_eating = 0
+        pass
+
 
 
 class Food:
@@ -28,8 +40,3 @@ class FoodType:
     def str(self, hj):
         str = f'{self.type[hj]},{self.rare[hj]},{self.time[hj]}'
         return str
-
-c = Animal()
-a = FoodType()
-b = Food(c)
-print(a.str(b.str()))
