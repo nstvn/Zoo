@@ -1,4 +1,5 @@
 import random
+from AnimalvsFood import *
 import time
 
 
@@ -16,11 +17,6 @@ class Zoo:
         self.max_visitors = 1
 
 
-class FoodType:
-    Grass = ('Grass', 1, 5)
-    Meat = ('Meat', 2, 10)
-
-
 class VisitorData:
     Child = frozenset(i for i in range(1, 7))
     Adult = frozenset(i for i in range(7, 60))
@@ -35,57 +31,6 @@ class Visitor(VisitorData):
             self.ticket_price = 100
 
 
-class AnimalData:
-    # type_food_eating = ("Grass", 'Meat')
-    # sizeA = ('Small', "Middle", "Big")
-    # food_amount = (5, 10, 15)
-    # rare = (1, 2, 3, 4, 5)
-    # habitat = ('Water', 'Ground')
-    Tiger = {'type_food': FoodType.Meat, 'sizeA': 'Middle', 'food_amount': 10, 'rare': 5, 'habitat': 'Ground'}
-    Elephant = {'type_food': FoodType.Grass, 'sizeA': 'Big', 'food_amount': 5, 'rare': 3, 'habitat': 'Ground'}
-
-    def __init__(self):
-        self.type_food_eating = 0
-        self.sizeA = ''
-        self.food_amount = 0
-        self.rare = 0
-        self.habitat = ''
-
-
-class Animal(AnimalData):
-    def __init__(self):
-        pass
-
-
-class Tiger(AnimalData):
-    def __init__(self):
-        super().__init__()
-        self.type_food_eating = FoodType.Meat
-        self.sizeA = 'Middle'
-        self.food_amount = 10
-        self.rare = 5
-        self.habitat = 'Ground'
-
-
-class Elephant(AnimalData):
-    def __init__(self):
-        super().__init__()
-        self.type_food_eating = FoodType.Grass
-        self.sizeA = 'Big'
-        self.food_amount = 5
-        self.rare = 3
-        self.habitat = 'Ground'
-
-
-class Food(FoodType):
-    def __init__(self, object):
-        self.hj = AnimalData.Tiger[0]
-
-    def str(self):
-        str = self.hj
-        return str
-
-
 class typeVolier:
     smallVolierGround = ('Small', 'Ground', 'free')
     middleVolierGround = ('Middle', 'Ground', 'free')
@@ -96,7 +41,7 @@ class typeVolier:
 
 
 class Volier(typeVolier):
-    def init_valier(self, object):
+    def init_volier(self, object):
 
         object.voliers.append(self.choose_volier())
         return object.voliers
@@ -119,12 +64,14 @@ class Volier(typeVolier):
             elif g == 3:
                 return typeVolier.bigVolierWater
 
-    def put_animal(self, object):
-        pass
-
+    def put_animal(self, object, volier):
+        print(volier[0])
+        if object.sizeA == volier[0][0]:
+            return 'ok'
 
 
 a = Zoo()
 b = Volier()
-print(b.init_valier(a))
-print(b.init_valier(a))
+c = Tiger()
+d = b.init_volier(a)
+print(b.put_animal(c, d))
