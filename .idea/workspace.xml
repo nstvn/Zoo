@@ -1,5 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="f4f3d4f9-8bc4-41f7-aca7-e793456d3f4f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
@@ -81,30 +99,55 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ORDER">
+      <list>
+        <option value="0" />
+        <option value="2" />
+        <option value="3" />
+        <option value="1" />
+      </list>
+    </option>
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="WindowStateProjectService">
     <state x="176" y="116" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1603786694971">
       <screen x="0" y="0" width="1440" height="920" />
     </state>
     <state x="176" y="116" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1440.920@0.0.1440.920" timestamp="1603786694971" />
-    <state width="1398" height="245" key="GridCell.Tab.0.bottom" timestamp="1603790887271">
+    <state x="100" y="100" width="1240" height="700" key="DiffContextDialog" timestamp="1603793308556">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="245" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1603790887271" />
+    <state x="100" y="100" width="1240" height="700" key="DiffContextDialog/0.0.1440.900@0.0.1440.900" timestamp="1603793308556" />
+    <state width="1398" height="245" key="GridCell.Tab.0.bottom" timestamp="1603794273180">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1398" height="245" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1603794273180" />
     <state width="1397" height="32" key="GridCell.Tab.0.bottom/0.0.1440.920@0.0.1440.920" timestamp="1603788710055" />
-    <state width="1398" height="245" key="GridCell.Tab.0.center" timestamp="1603790887270">
+    <state width="1398" height="245" key="GridCell.Tab.0.center" timestamp="1603794273178">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="245" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1603790887270" />
+    <state width="1398" height="245" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1603794273178" />
     <state width="1397" height="32" key="GridCell.Tab.0.center/0.0.1440.920@0.0.1440.920" timestamp="1603788710054" />
-    <state width="1398" height="245" key="GridCell.Tab.0.left" timestamp="1603790887269">
+    <state width="1398" height="245" key="GridCell.Tab.0.left" timestamp="1603794273177">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="245" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1603790887269" />
+    <state width="1398" height="245" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1603794273177" />
     <state width="1397" height="32" key="GridCell.Tab.0.left/0.0.1440.920@0.0.1440.920" timestamp="1603788710054" />
-    <state width="1398" height="245" key="GridCell.Tab.0.right" timestamp="1603790887270">
+    <state width="1398" height="245" key="GridCell.Tab.0.right" timestamp="1603794273179">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="245" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1603790887270" />
+    <state width="1398" height="245" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1603794273179" />
     <state width="1397" height="32" key="GridCell.Tab.0.right/0.0.1440.920@0.0.1440.920" timestamp="1603788710054" />
     <state x="320" y="190" key="Vcs.Push.Dialog.v2" timestamp="1603791045144">
       <screen x="0" y="0" width="1440" height="900" />
@@ -120,6 +163,6 @@
     <state x="383" y="195" width="672" height="678" key="search.everywhere.popup/0.0.1440.920@0.0.1440.920" timestamp="1603787652598" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Zoo$main.coverage" NAME="main Coverage Results" MODIFIED="1603790887251" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Zoo$main.coverage" NAME="main Coverage Results" MODIFIED="1603794273157" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
