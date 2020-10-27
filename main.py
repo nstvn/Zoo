@@ -12,6 +12,7 @@ class AnimalData:
     # rare = (1, 2, 3, 4, 5)
     # habitat = ('Water', 'Ground')
 
+
     Tiger = ('Meat', 'Middle', 10, 5, 'Ground')
     Elephant = ('Grass', 'Big', 5, 3, 'Ground')
 
