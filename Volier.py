@@ -20,7 +20,7 @@ class Volier:
 
     def choose_volier(self):
         i = input('type  ')
-        g = int(input('size  '))
+        g = int(input('size 1 if you want a small volier, size 2 for middle, and 3 for big '))
         if i == 'Ground':
             if g == 1:
                 self.sizeV, self.habitat, self.status = smallGroundVolier.str(self)
@@ -45,8 +45,12 @@ class Volier:
     def put_animal(self, object, volier):
         if object.habitat == volier.habitat:
             if object.sizeA == volier.sizeV:
-                return 'ok'
-        pass
+                print('the animal is in the volier now')
+                volier.status = object
+            else:
+                print('it is not suitable for your animal, try again')
+        else:
+            print('it is not suitable for your animal, try again')
 
 
 class smallGroundVolier(Volier):
