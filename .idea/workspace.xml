@@ -94,6 +94,14 @@
       <updated>1603786656076</updated>
       <workItem from="1603786657669" duration="2051000" />
     </task>
+    <task id="LOCAL-00001" summary="eda">
+      <created>1603795053739</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1603795053739</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -120,42 +128,51 @@
       </map>
     </option>
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="eda" />
+    <option name="LAST_COMMIT_MESSAGE" value="eda" />
+  </component>
   <component name="WindowStateProjectService">
     <state x="176" y="116" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1603786694971">
       <screen x="0" y="0" width="1440" height="920" />
     </state>
     <state x="176" y="116" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1440.920@0.0.1440.920" timestamp="1603786694971" />
+    <state x="327" y="25" key="CommitChangelistDialog2" timestamp="1603795053465">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="327" y="25" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1603795053465" />
     <state x="100" y="100" width="1240" height="700" key="DiffContextDialog" timestamp="1603793308556">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="100" y="100" width="1240" height="700" key="DiffContextDialog/0.0.1440.900@0.0.1440.900" timestamp="1603793308556" />
-    <state width="1398" height="245" key="GridCell.Tab.0.bottom" timestamp="1603794273180">
+    <state width="1398" height="245" key="GridCell.Tab.0.bottom" timestamp="1603795373497">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="245" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1603794273180" />
+    <state width="1398" height="245" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1603795373497" />
     <state width="1397" height="32" key="GridCell.Tab.0.bottom/0.0.1440.920@0.0.1440.920" timestamp="1603788710055" />
-    <state width="1398" height="245" key="GridCell.Tab.0.center" timestamp="1603794273178">
+    <state width="1398" height="245" key="GridCell.Tab.0.center" timestamp="1603795373496">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="245" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1603794273178" />
+    <state width="1398" height="245" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1603795373496" />
     <state width="1397" height="32" key="GridCell.Tab.0.center/0.0.1440.920@0.0.1440.920" timestamp="1603788710054" />
-    <state width="1398" height="245" key="GridCell.Tab.0.left" timestamp="1603794273177">
+    <state width="1398" height="245" key="GridCell.Tab.0.left" timestamp="1603795373495">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="245" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1603794273177" />
+    <state width="1398" height="245" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1603795373495" />
     <state width="1397" height="32" key="GridCell.Tab.0.left/0.0.1440.920@0.0.1440.920" timestamp="1603788710054" />
-    <state width="1398" height="245" key="GridCell.Tab.0.right" timestamp="1603794273179">
+    <state width="1398" height="245" key="GridCell.Tab.0.right" timestamp="1603795373496">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="245" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1603794273179" />
+    <state width="1398" height="245" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1603795373496" />
     <state width="1397" height="32" key="GridCell.Tab.0.right/0.0.1440.920@0.0.1440.920" timestamp="1603788710054" />
-    <state x="320" y="190" key="Vcs.Push.Dialog.v2" timestamp="1603791045144">
+    <state x="320" y="190" key="Vcs.Push.Dialog.v2" timestamp="1603795057482">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="320" y="190" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1603791045144" />
-    <state x="538" y="375" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1603787464058">
-      <screen x="0" y="0" width="1440" height="920" />
+    <state x="320" y="190" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1603795057482" />
+    <state x="538" y="367" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1603795296450">
+      <screen x="0" y="0" width="1440" height="900" />
     </state>
+    <state x="538" y="367" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1440.900@0.0.1440.900" timestamp="1603795296450" />
     <state x="538" y="375" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1440.920@0.0.1440.920" timestamp="1603787464058" />
     <state x="383" y="195" width="672" height="678" key="search.everywhere.popup" timestamp="1603787652598">
       <screen x="0" y="0" width="1440" height="920" />
@@ -163,6 +180,6 @@
     <state x="383" y="195" width="672" height="678" key="search.everywhere.popup/0.0.1440.920@0.0.1440.920" timestamp="1603787652598" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Zoo$main.coverage" NAME="main Coverage Results" MODIFIED="1603794273157" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Zoo$main.coverage" NAME="main Coverage Results" MODIFIED="1603795373475" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

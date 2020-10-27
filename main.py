@@ -53,10 +53,21 @@ class Animal(AnimalData):
 
 class Food(FoodType):
     def __init__(self, object):
-        self.hj = object[0]
+        self.hj = AnimalData.Tiger[0]
 
     def str(self):
         str = self.hj
         return str
 
 
+
+class typeVolier:
+    smallVolierGround = ('Small', 'Ground')
+    middleVolierGround = ('Middle', 'Ground')
+    bigVolierGround = ('Big', 'Ground')
+    smallVolierWater = ('Small', 'Water')
+    middleVolierWater = ('Middle', 'Water')
+    bigVolierWater = ('Big', 'Water')
+
+class Volier(typeVolier):
+    pass
