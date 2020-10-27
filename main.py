@@ -5,30 +5,31 @@ class Player:
         zoo_rating = 0
 
 
+class Animal:
+    def __init__(self):
+        self.type_food_eating = 0
+
+
 class Food:
-    def __init__(self, type_food):
-        type_food = grass
-        self.food_type = FoodType()
-        self.type, self.rare, self.time = self.food_type.type_food()
+    def __init__(self, object):
+        self.hj = object.type_food_eating
+
+    def str(self):
+        str = self.hj
+        return str
 
 
 class FoodType:
-    def __init__(self, type='', rare=0, time=1):
-        self.rare = rare
-        self.type = type
-        self.time = time
+    def __init__(self):
+        self.rare = (1, 2)
+        self.type = ('Grass', 'Meat')
+        self.time = (5, 10)
 
-    def grass(self):
-        self.type = 'Grass'
-        self.rare = 1
-        self.time = 5
-        return self.type, self.rare, self.time
+    def str(self, hj):
+        str = f'{self.type[hj]},{self.rare[hj]},{self.time[hj]}'
+        return str
 
-    def meat(self):
-        self.type = 'Meat'
-        self.rare = 2
-        self.time = 10
-
-
-a = Food()
-print(a.type)
+c = Animal()
+a = FoodType()
+b = Food(c)
+print(a.str(b.str()))
