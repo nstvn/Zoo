@@ -1,14 +1,25 @@
 import random
+import time
+
 
 class Player:
     def __init__(self):
-        money = 0
-        level = 0
-        zoo_rating = 0
+        self.money = 0
+        self.level = 0
+        self.zoo_rating = 0
+
+
+class Zoo:
+    def __init__(self):
+        self.voliers_amount = 0
+        self.animals_amount = 0
+        self.max_visitors = 1
+
 
 class FoodType:
     Grass = ('Grass', 1, 5)
     Meat = ('Meat', 2, 10)
+
 
 class VisitorData:
     Child = frozenset(i for i in range(1, 7))
@@ -16,7 +27,12 @@ class VisitorData:
 
 
 class Visitor(VisitorData):
-    pass
+    def __init__(self):
+        age = random.randint(1, 60)
+        if age in VisitorData.Child:
+            self.ticket_price = 0
+        elif age in VisitorData.Adult:
+            self.ticket_price = 100
 
 
 class AnimalData:
@@ -30,33 +46,17 @@ class AnimalData:
     Elephant = (FoodType.Grass, 'Big', 5, 3, 'Ground')
 
 
-
 class Animal(AnimalData):
     def __init__(self):
         pass
-
-
 
 
 class Food(FoodType):
     def __init__(self, object):
         self.hj = object[0]
 
-
     def str(self):
         str = self.hj
-        return str
-
-
-
-class FoodType:
-    def __init__(self):
-        self.rare = (1, 2)
-        self.type = ('Grass', 'Meat')
-        self.time = (5, 10)
-
-    def str(self, hj):
-        str = f'{self.type[hj]},{self.rare[hj]},{self.time[hj]}'
         return str
 
 
