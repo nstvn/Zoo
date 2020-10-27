@@ -11,7 +11,7 @@ class Player:
 
 class Zoo:
     def __init__(self):
-        self.voliers_amount = 0
+        self.voliers = []
         self.animals_amount = 0
         self.max_visitors = 1
 
@@ -62,12 +62,44 @@ class Food(FoodType):
 
 
 class typeVolier:
-    smallVolierGround = ('Small', 'Ground')
-    middleVolierGround = ('Middle', 'Ground')
-    bigVolierGround = ('Big', 'Ground')
-    smallVolierWater = ('Small', 'Water')
-    middleVolierWater = ('Middle', 'Water')
-    bigVolierWater = ('Big', 'Water')
+    smallVolierGround = ('Small', 'Ground', 'free')
+    middleVolierGround = ('Middle', 'Ground', 'free')
+    bigVolierGround = ('Big', 'Ground', 'free')
+    smallVolierWater = ('Small', 'Water', 'free')
+    middleVolierWater = ('Middle', 'Water', 'free')
+    bigVolierWater = ('Big', 'Water', 'free')
 
 class Volier(typeVolier):
-    pass
+    def init_valier(self, object):
+
+        object.voliers.append(self.choose_volier())
+        return object.voliers
+
+    def choose_volier(self):
+        i = input('type  ')
+        g = int(input('size  '))
+        if i == 'Ground':
+            if g == 1:
+                return typeVolier.smallVolierGround
+            elif g == 2:
+                return typeVolier.middleVolierGround
+            elif g == 3:
+                return typeVolier.bigVolierGround
+        elif i == 'Water':
+            if g == 1:
+                return typeVolier.smallVolierWater
+            elif g == 2:
+                return typeVolier.middleVolierWater
+            elif g == 3:
+                return typeVolier.bigVolierWater
+
+    def put_animal(self, object):
+        if object[1] ==
+
+
+
+
+a = Zoo()
+b = Volier()
+print(b.init_valier(a))
+print(b.init_valier(a))
