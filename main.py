@@ -60,7 +60,6 @@ class Food(FoodType):
         return str
 
 
-
 class typeVolier:
     smallVolierGround = ('Small', 'Ground')
     middleVolierGround = ('Middle', 'Ground')
@@ -68,6 +67,7 @@ class typeVolier:
     smallVolierWater = ('Small', 'Water')
     middleVolierWater = ('Middle', 'Water')
     bigVolierWater = ('Big', 'Water')
+
 
 class Volier(typeVolier):
     pass
