@@ -6,8 +6,8 @@ from Volier import *
 
 class Zoo:
     def __init__(self):
-        self.money = 0
-        self.level = 0
+        self.money = 1000
+        self.level = 1
         self.voliers = []
         self.animals_amount = 0
         self.max_visitors = 1
@@ -32,22 +32,25 @@ class Visitor(VisitorData):
 
 def main():
     zoo = Zoo()
-    state = True
-    while state:
+    print("Hello, this is ")
+
+    def cycle():
         print("Type an integer to choose what you want to do: \n1. Information about zoo \n2. Voliers in the zoo \n3. Go to the shop \n4. Exit")
         mode = input()
-        if mode == '1':
-            pass
-        elif mode == '2':
-            pass
-        elif mode == '3':
-            pass
-        elif mode == "4":
-            print("Goodbye")
-            state = False
-        else:
-            print("That is not a correct value. Try again \n")
-            main()
+        try:
+            if mode == '1':
+                pass
+            elif mode == '2':
+                pass
+            elif mode == '3':
+                pass
+            elif mode == "4":
+                print("Goodbye")
+            else:
+                print("That is not a correct value. Try again \n")
+                cycle()
+
+
         # print("Hello! Let's buy an animal to your new zoo")
         # animal = str(input("Do you want a Tiger or an Elephant? We don't have any other animals \n"))
         # if animal == 'Tiger':
