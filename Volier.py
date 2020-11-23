@@ -18,26 +18,26 @@ class Volier:
         return self
 
     def choose_volier(self):
-        i = input('type  ')
-        g = int(input('size 1 if you want a small volier, size 2 for middle, and 3 for big '))
-        if i == 'Ground':
-            if g == 1:
+        type_of_volier = input('type  ')
+        size_of_volier = int(input('size 1 if you want a small volier, size 2 for middle, and 3 for big '))
+        if type_of_volier == 'Ground':
+            if size_of_volier == 1:
                 self.sizeV, self.habitat, self.status = smallGroundVolier.str(self)
                 return self
-            elif g == 2:
+            elif size_of_volier == 2:
                 self.sizeV, self.habitat, self.status = middleGroundVolier.str(self)
                 return self
-            elif g == 3:
+            elif size_of_volier == 3:
                 self.sizeV, self.habitat, self.status = bigGroundVolier.str(self)
                 return self
-        elif i == 'Water':
-            if g == 1:
+        elif type_of_volier == 'Water':
+            if size_of_volier == 1:
                 self.sizeV, self.habitat, self.status = smallWaterVolier.str(self)
                 return self
-            elif g == 2:
+            elif size_of_volier == 2:
                 self.sizeV, self.habitat, self.status = middleWaterVolier.str(self)
                 return self
-            elif g == 3:
+            elif size_of_volier == 3:
                 self.sizeV, self.habitat, self.status = bigWaterVolier.str(self)
                 return self
 
