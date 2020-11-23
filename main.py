@@ -57,14 +57,7 @@ def cycle(zoo):
             else:
                 pass
     elif mode == '3':
-        choose = input('Do you want buy volier(1) or animal(2): ')
-        if choose == '1':
-            volier = Volier()
-            volier.choose_volier(zoo)
-            zoo.voliers.append(volier)
-
-        elif choose == '2':
-            pass
+        return True
     elif mode == '4':
         print("Goodbye")
         exit()
