@@ -9,14 +9,6 @@ class Food(FoodType):
 
 
 class AnimalData:
-    # type_food_eating = ("Grass", 'Meat')
-    # sizeA = ('Small', "Middle", "Big")
-    # food_amount = (5, 10, 15)
-    # rare = (1, 2, 3, 4, 5)
-    # habitat = ('Water', 'Ground')
-    # Tiger = {'type_food': FoodType.Meat, 'sizeA': 'Middle', 'food_amount': 10, 'rare': 5, 'habitat': 'Ground'}
-    # Elephant = {'type_food': FoodType.Grass, 'sizeA': 'Big', 'food_amount': 5, 'rare': 3, 'habitat': 'Ground'}
-
     def __init__(self):
         self.name = ''
         self.type_food_eating = 0

@@ -19,6 +19,7 @@ class Zoo:
             return False
         elif self.money - price >= 0:
             self.money -= price
+            return True
 
 
 class VisitorData:
@@ -63,20 +64,24 @@ def cycle(zoo):
         if choose == '1':
             volier = Volier()
             volier.choose_volier(zoo)
-            zoo.voliers.append(volier)
             # zoo.money += 100
 
         elif choose == '2':
             animal = Animal()
             animal = animal.choose_animal()
             print(f"Animal price is {animal.price}. y - yes, n - no: ")
+            
             answer = input()
             if answer == 'y':
                 print("You need a suitable volier for the animal. Let's choose one of yours")
-                for i in range(0, len(zoo.voliers)):
-                    print(f'{i + 1}. {zoo.voliers[i].habitat}')
-                    number = input()
-                    zoo.voliers[int(number) - 1].put_animal(animal, zoo.voliers[int(number) - 1], zoo, animal.price)
+                free_voliers = []
+                for volier in zoo.voliers:
+                    if volier.status == 'free':
+                        free_voliers.append(volier)
+                for i in range(0, len(free_voliers)):
+                    print(f'{i + 1}.{free_voliers[i].habitat}')
+                number = input()
+                free_voliers[int(number) - 1].put_animal(animal, free_voliers[int(number) - 1], zoo, animal.price)
             if answer == 'n':
                 pass
         # zoo.money += 100
@@ -90,21 +95,7 @@ def cycle(zoo):
 
 def main():
     zoo = Zoo()
-    print("Hello, this is your new zoo. Your level is 1, and you are given 1000$ for starting")
-
-    # animal = str(input("Do you want a Tiger or an Elephant? We don't have any other animals \n"))
-    # if animal == 'Tiger':
-    #     a = Tiger()
-    # elif animal == 'Elephant':
-    #     a = Elephant()
-    # else:
-    #     print('the name is wrong, try to start the program again')
-
-    # b = Volier()
-
-    # print("Let's buy a volier for the new animal. You can choose Ground or Water type")
-    # while b.status == 'free':
-    #     b.put_animal(a, b.init_volier(zoo))
+    print("Hello, this is your new zoo. Your level is 0, and you are given 1000$ for starting")
 
     while True:
         cycle(zoo=zoo)

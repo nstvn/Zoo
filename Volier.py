@@ -1,12 +1,3 @@
-# class typeVolier:
-#     smallVolierGround = ('Small', 'Ground', 'free')
-#     middleVolierGround = ('Middle', 'Ground', 'free')
-#     bigVolierGround = ('Big', 'Ground', 'free')
-#     smallVolierWater = ('Small', 'Water', 'free')
-#     middleVolierWater = ('Middle', 'Water', 'free')
-#     bigVolierWater = ('Big', 'Water', 'free')
-
-
 class Volier:
     def __init__(self):
         self.habitat = 0
@@ -20,26 +11,29 @@ class Volier:
             choose = input('y-yes, n-no: ')
             if choose == 'y':
                 zoo.chek_money(100)
+                self.habitat, self.status = GroundVolier.str(self)
+                zoo.voliers.append(self)
             elif choose == 'n':
                 pass
-            self.habitat, self.status = GroundVolier.str(self)
-            return self
+            
 
         elif type_of_volier == '2':
             print('water volier-price: 300')
             choose = input('y-yes, n-no: ')
             if choose == 'y':
                 zoo.chek_money(300)
+                self.habitat, self.status = WaterVolier.str(self)
+                zoo.voliers.append(self)
             elif choose == 'n':
                 pass
-            self.habitat, self.status = WaterVolier.str(self)
-            return self
+            
 
     def put_animal(self, object, volier, zoo, price):
         if object.habitat == volier.habitat:
             if zoo.chek_money(price):
                 print('the animal is in the volier now')
                 volier.status = object
+                zoo.animals_amount += 1
         else:
             print('it is not suitable for your animal, try again')
 
