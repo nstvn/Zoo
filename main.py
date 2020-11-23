@@ -43,7 +43,7 @@ def cycle(zoo):
         cycle(zoo=zoo)
     elif mode == '2':
         for volier in zoo.voliers:
-            print(f'{volier.habitat} volier: {volier.status.name}')
+            print(f'{volier.habitat} volier: {volier.status}')
     elif mode == '3':
         return True
     elif mode == '4':
@@ -58,19 +58,19 @@ def main():
     zoo = Zoo()
     print("Hello, this is your new zoo. Your level is 1, and you are given 1000$ for starting")
 
-    animal = str(input("Do you want a Tiger or an Elephant? We don't have any other animals \n"))
-    if animal == 'Tiger':
-        a = Tiger()
-    elif animal == 'Elephant':
-        a = Elephant()
-    else:
-        print('the name is wrong, try to start the program again')
+    # animal = str(input("Do you want a Tiger or an Elephant? We don't have any other animals \n"))
+    # if animal == 'Tiger':
+    #     a = Tiger()
+    # elif animal == 'Elephant':
+    #     a = Elephant()
+    # else:
+    #     print('the name is wrong, try to start the program again')
 
-    b = Volier()
+    # b = Volier()
 
-    print("Let's buy a volier for the new animal. You can choose Ground or Water type")
-    while b.status == 'free':
-        b.put_animal(a, b.init_volier(zoo))
+    # print("Let's buy a volier for the new animal. You can choose Ground or Water type")
+    # while b.status == 'free':
+    #     b.put_animal(a, b.init_volier(zoo))
 
     while True:
         cycle(zoo=zoo)

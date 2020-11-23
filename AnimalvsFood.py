@@ -30,6 +30,9 @@ class Animal(AnimalData):
     def __init__(self):
         pass
 
+    def __str__(self):
+        return self.name
+
 
 class Tiger(Animal):
     def __init__(self):
