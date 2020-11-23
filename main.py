@@ -8,7 +8,7 @@ from Volier import *
 class Zoo:
     def __init__(self):
         self.money = 1000
-        self.level = 1
+        self.level = 0
         self.voliers = []
         self.animals_amount = 0
         self.max_visitors = 1
@@ -42,7 +42,8 @@ def cycle(zoo):
               f'Max amount of visitors: {zoo.max_visitors} \n')
         cycle(zoo=zoo)
     elif mode == '2':
-        return True
+        for volier in zoo.voliers:
+            print(f'{volier.habitat} volier: {volier.status.name}')
     elif mode == '3':
         return True
     elif mode == '4':
@@ -56,22 +57,23 @@ def cycle(zoo):
 def main():
     zoo = Zoo()
     print("Hello, this is your new zoo. Your level is 1, and you are given 1000$ for starting")
-    cycle(zoo=zoo)
 
-    # print("Hello! Let's buy an animal to your new zoo")
-    # animal = str(input("Do you want a Tiger or an Elephant? We don't have any other animals \n"))
-    # if animal == 'Tiger':
-    #     a = Tiger()
-    # elif animal == 'Elephant':
-    #     a = Elephant()
-    # else:
-    #     print('the name is wrong, try to start the program again')
+    animal = str(input("Do you want a Tiger or an Elephant? We don't have any other animals \n"))
+    if animal == 'Tiger':
+        a = Tiger()
+    elif animal == 'Elephant':
+        a = Elephant()
+    else:
+        print('the name is wrong, try to start the program again')
 
-    # b = Volier()
+    b = Volier()
 
-    # print("Let's buy a volier for the new animal. You can choose Ground or Water type")
-    # while b.status == 'free':
-    #     b.put_animal(a, b.init_volier(c))
+    print("Let's buy a volier for the new animal. You can choose Ground or Water type")
+    while b.status == 'free':
+        b.put_animal(a, b.init_volier(zoo))
+
+    while True:
+        cycle(zoo=zoo)
 
 
 if __name__ == '__main__':

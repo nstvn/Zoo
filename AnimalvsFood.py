@@ -18,6 +18,7 @@ class AnimalData:
     # Elephant = {'type_food': FoodType.Grass, 'sizeA': 'Big', 'food_amount': 5, 'rare': 3, 'habitat': 'Ground'}
 
     def __init__(self):
+        self.name = ''
         self.type_food_eating = 0
         self.sizeA = ''
         self.food_amount = 0
@@ -33,6 +34,7 @@ class Animal(AnimalData):
 class Tiger(Animal):
     def __init__(self):
         super().__init__()
+        self.name = 'Tiger'
         self.type_food_eating = FoodType.Meat
         self.sizeA = 'Middle'
         self.food_amount = 10
@@ -43,6 +45,7 @@ class Tiger(Animal):
 class Elephant(Animal):
     def __init__(self):
         super().__init__()
+        self.name = 'Elephant'
         self.type_food_eating = FoodType.Grass
         self.sizeA = 'Big'
         self.food_amount = 5
