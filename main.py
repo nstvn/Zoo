@@ -1,5 +1,6 @@
 import random
 import time
+import math
 from AnimalvsFood import *
 from Volier import *
 
@@ -30,15 +31,16 @@ class Visitor(VisitorData):
             self.ticket_price = 50
 
 
-
-def cycle():
-    var = set(range(1,4))
+def cycle(zoo):
+    zoo.level = math.floor((len(zoo.voliers) + zoo.animals_amount) / 2)
+    zoo.max_visitors = zoo.level * 10
     print(
         "Type an integer to choose what you want to do: \n1. Information about zoo \n2. Voliers in the zoo \n3. Go to the shop \n4. Exit")
-
     mode = input()
     if mode == '1':
-        return True
+        print(f'Level: {zoo.level} \nMoney: {zoo.money} \nAmount of voliers: {len(zoo.voliers)} \nAmount of animals: {zoo.animals_amount} \n'
+              f'Max amount of visitors: {zoo.max_visitors} \n')
+        cycle(zoo=zoo)
     elif mode == '2':
         return True
     elif mode == '3':
@@ -48,14 +50,13 @@ def cycle():
         exit()
     else:
         print("That is not a correct value. Try again \n")
-        cycle()
+        cycle(zoo=zoo)
 
 
 def main():
     zoo = Zoo()
-    print("Hello, this is ")
-    while True:
-        cycle()
+    print("Hello, this is your new zoo. Your level is 1, and you are given 1000$ for starting")
+    cycle(zoo=zoo)
 
     # print("Hello! Let's buy an animal to your new zoo")
     # animal = str(input("Do you want a Tiger or an Elephant? We don't have any other animals \n"))
