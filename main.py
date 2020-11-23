@@ -4,14 +4,10 @@ from AnimalvsFood import *
 from Volier import *
 
 
-class Player:
+class Zoo:
     def __init__(self):
         self.money = 0
         self.level = 0
-
-
-class Zoo:
-    def __init__(self):
         self.voliers = []
         self.animals_amount = 0
         self.max_visitors = 1
@@ -32,7 +28,7 @@ class Visitor(VisitorData):
 
 
 def main():
-    c = Zoo()
+    zoo = Zoo()
     state = True
     while state:
         print("Type an integer to choose what you want to do: \n1. Information about zoo \n2. Voliers in the zoo \n3. Go to the shop \n4. Exit")
