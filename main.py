@@ -31,21 +31,39 @@ class Visitor(VisitorData):
             self.ticket_price = 100
 
 
+def main():
+    c = Zoo()
+    state = True
+    while state:
+        print("Type an integer to choose what you want to do: \n1. Information about zoo \n2. Voliers in the zoo \n3. Go to the shop \n4. Exit")
+        mode = input()
+        if mode == '1':
+            pass
+        elif mode == '2':
+            pass
+        elif mode == '3':
+            pass
+        elif mode == "4":
+            print("Goodbye")
+            state = False
+        else:
+            print("That is not a correct value. Try again \n")
+            main()
+        # print("Hello! Let's buy an animal to your new zoo")
+        # animal = str(input("Do you want a Tiger or an Elephant? We don't have any other animals \n"))
+        # if animal == 'Tiger':
+        #     a = Tiger()
+        # elif animal == 'Elephant':
+        #     a = Elephant()
+        # else:
+        #     print('the name is wrong, try to start the program again')
+
+        # b = Volier()
+
+        # print("Let's buy a volier for the new animal. You can choose Ground or Water type")
+        # while b.status == 'free':
+        #     b.put_animal(a, b.init_volier(c))
 
 
 if __name__ == '__main__':
-    c = Zoo()
-    print("Hello! Let's buy an animal to your new zoo")
-    animal = str(input("Do you want a Tiger or an Elephant? We don't have any other animals \n"))
-    if animal == 'Tiger':
-        a = Tiger()
-    elif animal == 'Elephant':
-        a = Elephant()
-    else:
-        print('the name is wrong, try to start the program again')
-
-    b = Volier()
-
-    print("Let's buy a volier for the new animal. You can choose Ground or Water type")
-    while b.status == 'free':
-        b.put_animal(a, b.init_volier(c))
+    main()

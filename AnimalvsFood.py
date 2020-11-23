@@ -30,7 +30,7 @@ class Animal(AnimalData):
         pass
 
 
-class Tiger(AnimalData):
+class Tiger(Animal):
     def __init__(self):
         super().__init__()
         self.type_food_eating = FoodType.Meat
@@ -40,7 +40,7 @@ class Tiger(AnimalData):
         self.habitat = 'Ground'
 
 
-class Elephant(AnimalData):
+class Elephant(Animal):
     def __init__(self):
         super().__init__()
         self.type_food_eating = FoodType.Grass
