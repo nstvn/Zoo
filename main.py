@@ -1,7 +1,7 @@
 import random
+import time
 from AnimalvsFood import *
 from Volier import *
-import time
 
 
 class Player:
@@ -32,18 +32,20 @@ class Visitor(VisitorData):
             self.ticket_price = 100
 
 
-c = Zoo()
-print("Hello! Let's buy an animal to your new zoo")
-animal = str(input("Do you want a Tiger or an Elephant? We don't have any other animals \n"))
-if animal == 'Tiger':
-    a = Tiger()
-elif animal == 'Elephant':
-    a = Elephant()
-else:
-    print('the name is wrong, try to start the program again')
 
-b = Volier()
+if __name__ == '__main__':
+    c = Zoo()
+    print("Hello! Let's buy an animal to your new zoo")
+    animal = str(input("Do you want a Tiger or an Elephant? We don't have any other animals \n"))
+    if animal == 'Tiger':
+        a = Tiger()
+    elif animal == 'Elephant':
+        a = Elephant()
+    else:
+        print('the name is wrong, try to start the program again')
 
-print("Let's buy a volier for the new animal. You can choose Ground or Water type")
-while b.status == 'free':
-    b.put_animal(a, b.init_volier(c))
+    b = Volier()
+
+    print("Let's buy a volier for the new animal. You can choose Ground or Water type")
+    while b.status == 'free':
+        b.put_animal(a, b.init_volier(c))
