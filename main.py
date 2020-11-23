@@ -42,8 +42,20 @@ def cycle(zoo):
               f'Max amount of visitors: {zoo.max_visitors} \n')
         cycle(zoo=zoo)
     elif mode == '2':
+        free_voliers = []
+        print("Here is a list of all of your voliers: \n")
         for volier in zoo.voliers:
             print(f'{volier.habitat} volier: {volier.status}')
+            if volier.status == 'free':
+                free_voliers.append(volier)
+        if len(free_voliers) != 0:
+            print("Do you want to put animals in the free voliers? Type y/n: \n")
+            answer = input()
+            if answer == "y":
+                for i in range(0, len(free_voliers)):
+                    print(f'{i}. {free_voliers[i].habitat}')
+            else:
+                pass
     elif mode == '3':
         return True
     elif mode == '4':
