@@ -13,6 +13,13 @@ class Zoo:
         self.animals_amount = 0
         self.max_visitors = 1
 
+    def chek_money(self, price):
+        if self.money - price < 0:
+            print('You dont have enough money!!!')
+            return False
+        elif self.money - price >= 0:
+            self.money -= price
+
 
 class VisitorData:
     Child = frozenset(i for i in range(1, 7))
@@ -38,37 +45,41 @@ def cycle(zoo):
         "Type an integer to choose what you want to do: \n1. Information about zoo \n2. Voliers in the zoo \n3. Go to the shop \n4. Exit")
     mode = input()
     if mode == '1':
-        print(f'Level: {zoo.level} \nMoney: {zoo.money} \nAmount of voliers: {len(zoo.voliers)} \nAmount of animals: {zoo.animals_amount} \n'
-              f'Max amount of visitors: {zoo.max_visitors} \n')
+        print(
+            f'Level: {zoo.level} \nMoney: {zoo.money} \nAmount of voliers: {len(zoo.voliers)} \nAmount of animals: {zoo.animals_amount} \n'
+            f'Max amount of visitors: {zoo.max_visitors} \n')
         cycle(zoo=zoo)
+        # zoo.money += 100
 
     elif mode == '2':
         print("Here is a list of all of your voliers: \n")
         for volier in zoo.voliers:
             print(f'{volier.habitat} volier: {volier.status}')
+        # zoo.money += 100
 
     elif mode == '3':
-        choose = input("What do you want buy? Volier(1) or animal(2)")
+        choose = input("What do you want buy? Volier(1) or animal(2): ")
 
         if choose == '1':
             volier = Volier()
             volier.choose_volier(zoo)
             zoo.voliers.append(volier)
-            
+            # zoo.money += 100
+
         elif choose == '2':
             animal = Animal()
             animal = animal.choose_animal()
-            print(f"Animal price is {animal.price}. y - yes, n - no")
+            print(f"Animal price is {animal.price}. y - yes, n - no: ")
             answer = input()
             if answer == 'y':
                 print("You need a suitable volier for the animal. Let's choose one of yours")
                 for i in range(0, len(zoo.voliers)):
-                    print(f'{i}. {zoo.voliers[i].habitat}')
+                    print(f'{i + 1}. {zoo.voliers[i].habitat}')
                     number = input()
-                    zoo.voliers[int(number)].put_animal(animal, zoo.voliers[int(number)], zoo, animal.price)
+                    zoo.voliers[int(number) - 1].put_animal(animal, zoo.voliers[int(number) - 1], zoo, animal.price)
             if answer == 'n':
                 pass
-    
+        # zoo.money += 100
     elif mode == '4':
         print("Goodbye")
         exit()

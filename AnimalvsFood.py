@@ -43,7 +43,8 @@ class Animal(AnimalData):
             animal = Shark()
         elif answer == '4':
             animal = Wolf()
-        return animal 
+        return animal
+
 
 class Tiger(Animal):
     def __init__(self):
@@ -81,5 +82,5 @@ class Wolf(Animal):
         self.name = 'Wolf'
         self.type_food_eating = FoodType.Meat
         self.food_amount = 5
-        self.price = 50
+        self.price = 1050
         self.habitat = 'Ground'

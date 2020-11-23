@@ -17,19 +17,19 @@ class Volier:
 
         if type_of_volier == '1':
             print('ground volier-price: 100')
-            choose = input('y-yes, n-no')
+            choose = input('y-yes, n-no: ')
             if choose == 'y':
-                zoo.money -= 100
+                zoo.chek_money(100)
             elif choose == 'n':
                 pass
             self.habitat, self.status = GroundVolier.str(self)
             return self
-            
+
         elif type_of_volier == '2':
             print('water volier-price: 300')
-            choose = input('y-yes, n-no')
+            choose = input('y-yes, n-no: ')
             if choose == 'y':
-                zoo.money -= 300
+                zoo.chek_money(300)
             elif choose == 'n':
                 pass
             self.habitat, self.status = WaterVolier.str(self)
@@ -37,9 +37,9 @@ class Volier:
 
     def put_animal(self, object, volier, zoo, price):
         if object.habitat == volier.habitat:
+            if zoo.chek_money(price):
                 print('the animal is in the volier now')
                 volier.status = object
-                zoo.money -= price
         else:
             print('it is not suitable for your animal, try again')
 
