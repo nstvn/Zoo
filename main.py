@@ -10,7 +10,7 @@ class Zoo:
         self.money = 1000
         self.level = 0
         self.voliers = []
-        self.animals = []
+        self.animals_amount = 0
         self.max_visitors = 1
 
 
@@ -32,14 +32,14 @@ class Visitor(VisitorData):
 
 
 def cycle(zoo):
-    zoo.level = math.floor((len(zoo.voliers) + len(zoo.animals)) / 2)
+    zoo.level = math.floor((len(zoo.voliers) + zoo.animals_amount) / 2)
     zoo.max_visitors = zoo.level * 10
     print(
         "Type an integer to choose what you want to do: \n1. Information about zoo \n2. Voliers in the zoo \n3. Go to the shop \n4. Exit")
     mode = input()
 
     if mode == '1':
-        print(f'Level: {zoo.level} \nMoney: {zoo.money} \nAmount of voliers: {len(zoo.voliers)} \nAmount of animals: {len(zoo.animals)} \n'
+        print(f'Level: {zoo.level} \nMoney: {zoo.money} \nAmount of voliers: {len(zoo.voliers)} \nAmount of animals: {zoo.animals_amount} \n'
               f'Max amount of visitors: {zoo.max_visitors} \n')
         cycle(zoo=zoo)
 
