@@ -41,29 +41,34 @@ def cycle(zoo):
         print(f'Level: {zoo.level} \nMoney: {zoo.money} \nAmount of voliers: {len(zoo.voliers)} \nAmount of animals: {zoo.animals_amount} \n'
               f'Max amount of visitors: {zoo.max_visitors} \n')
         cycle(zoo=zoo)
+
     elif mode == '2':
-        free_voliers = []
         print("Here is a list of all of your voliers: \n")
         for volier in zoo.voliers:
             print(f'{volier.habitat} volier: {volier.status}')
-            if volier.status == 'free':
-                free_voliers.append(volier)
-        if len(free_voliers) != 0:
-            print("Do you want to put animals in the free voliers? Type y/n: \n")
-            answer = input()
-            if answer == "y":
-                for i in range(0, len(free_voliers)):
-                    print(f'{i}. {free_voliers[i].habitat}')
-            else:
-                pass
+
     elif mode == '3':
         choose = input("What do you want buy? Volier(1) or animal(2)")
+
         if choose == '1':
             volier = Volier()
             volier.choose_volier(zoo)
             zoo.voliers.append(volier)
+            
         elif choose == '2':
-            pass
+            animal = Animal()
+            animal = animal.choose_animal()
+            print(f"Animal price is {animal.price}. y - yes, n - no")
+            answer = input()
+            if answer == 'y':
+                print("You need a suitable volier for the animal. Let's choose one of yours")
+                for i in range(0, len(zoo.voliers)):
+                    print(f'{i}. {zoo.voliers[i].habitat}')
+                    number = input()
+                    zoo.voliers[int(number)].put_animal(animal, zoo.voliers[int(number)], zoo, animal.price)
+            if answer == 'n':
+                pass
+    
     elif mode == '4':
         print("Goodbye")
         exit()
