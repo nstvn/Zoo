@@ -5,11 +5,7 @@ class FoodType:
 
 class Food(FoodType):
     def __init__(self, object):
-        self.hj = AnimalData.Tiger[0]
-
-    def str(self):
-        str = self.hj
-        return str
+        pass
 
 
 class AnimalData:

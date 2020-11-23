@@ -14,7 +14,6 @@ class Volier:
         self.status = 'free'
 
     def init_volier(self, object):
-
         object.voliers.append(self.choose_volier())
         return self
 

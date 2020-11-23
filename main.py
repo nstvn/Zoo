@@ -8,7 +8,6 @@ class Player:
     def __init__(self):
         self.money = 0
         self.level = 0
-        self.zoo_rating = 0
 
 
 class Zoo:
@@ -30,6 +29,7 @@ class Visitor(VisitorData):
             self.ticket_price = 0
         elif age in VisitorData.Adult:
             self.ticket_price = 100
+
 
 
 
