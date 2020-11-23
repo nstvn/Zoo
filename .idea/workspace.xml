@@ -21,6 +21,8 @@
   <component name="ChangeListManager">
     <list default="true" id="f4f3d4f9-8bc4-41f7-aca7-e793456d3f4f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AnimalvsFood.py" beforeDir="false" afterPath="$PROJECT_DIR$/AnimalvsFood.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Volier.py" beforeDir="false" afterPath="$PROJECT_DIR$/Volier.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -116,7 +118,8 @@
       <option name="presentableId" value="Default" />
       <updated>1603786656076</updated>
       <workItem from="1603786657669" duration="2051000" />
-      <workItem from="1606128434329" duration="3361000" />
+      <workItem from="1606128434329" duration="4230000" />
+      <workItem from="1606133440041" duration="3664000" />
     </task>
     <task id="LOCAL-00001" summary="eda">
       <created>1603795053739</created>
@@ -167,7 +170,14 @@
       <option name="project" value="LOCAL" />
       <updated>1606129585624</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="fix cycle()">
+      <created>1606132252646</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1606132252646</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -203,40 +213,41 @@
     <MESSAGE value="rabotaet!" />
     <MESSAGE value="rabotaet!+ console worked for eanglish man and women by katerina aka volier" />
     <MESSAGE value="Rename variable" />
-    <option name="LAST_COMMIT_MESSAGE" value="Rename variable" />
+    <MESSAGE value="fix cycle()" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix cycle()" />
   </component>
   <component name="WindowStateProjectService">
     <state x="176" y="116" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1603786694971">
       <screen x="0" y="0" width="1440" height="920" />
     </state>
     <state x="176" y="116" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1440.920@0.0.1440.920" timestamp="1603786694971" />
-    <state x="311" y="51" key="CommitChangelistDialog2" timestamp="1606129585376">
+    <state x="311" y="51" key="CommitChangelistDialog2" timestamp="1606132252457">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="311" y="51" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1606129585376" />
+    <state x="311" y="51" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1606132252457" />
     <state x="100" y="100" width="1240" height="700" key="DiffContextDialog" timestamp="1603793308556">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="100" y="100" width="1240" height="700" key="DiffContextDialog/0.0.1440.900@0.0.1440.900" timestamp="1603793308556" />
-    <state width="1398" height="325" key="GridCell.Tab.0.bottom" timestamp="1606132228079">
+    <state width="1398" height="227" key="GridCell.Tab.0.bottom" timestamp="1606137378414">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="325" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1606132228079" />
+    <state width="1398" height="227" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1606137378414" />
     <state width="1397" height="32" key="GridCell.Tab.0.bottom/0.0.1440.920@0.0.1440.920" timestamp="1603788710055" />
-    <state width="1398" height="325" key="GridCell.Tab.0.center" timestamp="1606132228077">
+    <state width="1398" height="227" key="GridCell.Tab.0.center" timestamp="1606137378411">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="325" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1606132228077" />
+    <state width="1398" height="227" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1606137378411" />
     <state width="1397" height="32" key="GridCell.Tab.0.center/0.0.1440.920@0.0.1440.920" timestamp="1603788710054" />
-    <state width="1398" height="325" key="GridCell.Tab.0.left" timestamp="1606132228075">
+    <state width="1398" height="227" key="GridCell.Tab.0.left" timestamp="1606137378410">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="325" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1606132228075" />
+    <state width="1398" height="227" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1606137378410" />
     <state width="1397" height="32" key="GridCell.Tab.0.left/0.0.1440.920@0.0.1440.920" timestamp="1603788710054" />
-    <state width="1398" height="325" key="GridCell.Tab.0.right" timestamp="1606132228078">
+    <state width="1398" height="227" key="GridCell.Tab.0.right" timestamp="1606137378412">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="325" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1606132228078" />
+    <state width="1398" height="227" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1606137378412" />
     <state width="1397" height="32" key="GridCell.Tab.0.right/0.0.1440.920@0.0.1440.920" timestamp="1603788710054" />
     <state width="1398" height="304" key="GridCell.Tab.1.bottom" timestamp="1603803327517">
       <screen x="0" y="0" width="1440" height="900" />
@@ -254,14 +265,22 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state width="1398" height="304" key="GridCell.Tab.1.right/0.0.1440.900@0.0.1440.900" timestamp="1603803327516" />
-    <state x="320" y="190" key="Vcs.Push.Dialog.v2" timestamp="1606129588896">
+    <state x="144" y="79" key="MergeDialog" timestamp="1606133326764">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="320" y="190" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1606129588896" />
-    <state x="538" y="367" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1606130954020">
+    <state x="144" y="79" key="MergeDialog/0.0.1440.900@0.0.1440.900" timestamp="1606133326764" />
+    <state x="533" y="159" key="RollbackChangesDialog" timestamp="1606133463109">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="538" y="367" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1440.900@0.0.1440.900" timestamp="1606130954020" />
+    <state x="533" y="159" key="RollbackChangesDialog/0.0.1440.900@0.0.1440.900" timestamp="1606133463109" />
+    <state x="320" y="190" key="Vcs.Push.Dialog.v2" timestamp="1606132258851">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="320" y="190" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1606132258851" />
+    <state x="538" y="367" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1606135671350">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="538" y="367" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1440.900@0.0.1440.900" timestamp="1606135671350" />
     <state x="538" y="375" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1440.920@0.0.1440.920" timestamp="1603787464058" />
     <state x="383" y="195" width="672" height="678" key="search.everywhere.popup" timestamp="1603787652598">
       <screen x="0" y="0" width="1440" height="920" />
@@ -269,7 +288,7 @@
     <state x="383" y="195" width="672" height="678" key="search.everywhere.popup/0.0.1440.920@0.0.1440.920" timestamp="1603787652598" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Zoo$main.coverage" NAME="main Coverage Results" MODIFIED="1606132228056" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Zoo$main.coverage" NAME="main Coverage Results" MODIFIED="1606137378386" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Zoo$Volier.coverage" NAME="Volier Coverage Results" MODIFIED="1603802476955" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
