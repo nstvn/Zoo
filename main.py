@@ -37,10 +37,12 @@ def cycle(zoo):
     print(
         "Type an integer to choose what you want to do: \n1. Information about zoo \n2. Voliers in the zoo \n3. Go to the shop \n4. Exit")
     mode = input()
+
     if mode == '1':
         print(f'Level: {zoo.level} \nMoney: {zoo.money} \nAmount of voliers: {len(zoo.voliers)} \nAmount of animals: {zoo.animals_amount} \n'
               f'Max amount of visitors: {zoo.max_visitors} \n')
         cycle(zoo=zoo)
+
     elif mode == '2':
         free_voliers = []
         print("Here is a list of all of your voliers: \n")
@@ -56,11 +58,14 @@ def cycle(zoo):
                     print(f'{i}. {free_voliers[i].habitat}')
             else:
                 pass
+
     elif mode == '3':
         return True
+
     elif mode == '4':
         print("Goodbye")
         exit()
+        
     else:
         print("That is not a correct value. Try again \n")
         cycle(zoo=zoo)
