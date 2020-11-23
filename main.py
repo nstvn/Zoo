@@ -15,7 +15,8 @@ class Zoo:
 
 class VisitorData:
     Child = frozenset(i for i in range(1, 7))
-    Adult = frozenset(i for i in range(7, 60))
+    Adult = frozenset(i for i in range(7, 50))
+    Old = frozenset(i for i in range(50, 110))
 
 
 class Visitor(VisitorData):
@@ -25,6 +26,8 @@ class Visitor(VisitorData):
             self.ticket_price = 0
         elif age in VisitorData.Adult:
             self.ticket_price = 100
+        elif age in VisitorData.Old:
+            self.ticket_price = 50
 
 
 def main():
