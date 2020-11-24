@@ -1,6 +1,7 @@
 import random
 import time
 import math
+import threading
 from AnimalvsFood import *
 from Volier import *
 
@@ -93,13 +94,26 @@ def cycle(zoo):
         cycle(zoo=zoo)
 
 
+def add_money(zoo):
+    while True:
+        zoo.money += (zoo.max_visitors * 10)
+        time.sleep(120)
+
+
+def work_zoo(zoo):
+    while True:
+        cycle(zoo=zoo)
+
+
 def main():
     zoo = Zoo()
     print("Hello, this is your new zoo. Your level is 0, and you are given 1000$ for starting")
 
-    while True:
-        cycle(zoo=zoo)
-
+    thread1 = threading.Thread(target=work_zoo, args=(zoo,))
+    thread2 = threading.Thread(target=add_money, args=(zoo,))
+    thread2.start()
+    thread1.start()
+    
 
 if __name__ == '__main__':
     main()
