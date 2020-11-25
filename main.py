@@ -14,9 +14,9 @@ class Zoo:
         self.animals_amount = 0
         self.max_visitors = 1
 
-    def chek_money(self, price):
+    def check_money(self, price):
         if self.money - price < 0:
-            print('You dont have enough money!!!')
+            print("You don't have enough money!!! \n")
             return False
         elif self.money - price >= 0:
             self.money -= price
@@ -43,21 +43,24 @@ class Visitor(VisitorData):
 def cycle(zoo):
     zoo.level = math.floor((len(zoo.voliers) + zoo.animals_amount) / 2)
     zoo.max_visitors = zoo.level * 10
+    print()
     print(
-        "Type an integer to choose what you want to do: \n1. Information about zoo \n2. Voliers in the zoo \n3. Go to the shop \n4. Exit")
+        "Type an integer to choose what you want to do: \n1. Information about zoo \n2. Voliers in the zoo \n3. Go to the shop \n4. Exit \n")
     mode = input()
     if mode == '1':
         print(
-            f'Level: {zoo.level} \nMoney: {zoo.money} \nAmount of voliers: {len(zoo.voliers)} \nAmount of animals: {zoo.animals_amount} \n'
+            f'Level: {zoo.level} \nMoney: {zoo.money} (+{zoo.max_visitors * 5}/min) \nAmount of voliers: {len(zoo.voliers)} \nAmount of animals: {zoo.animals_amount} \n'
             f'Max amount of visitors: {zoo.max_visitors} \n')
         cycle(zoo=zoo)
-        # zoo.money += 100
 
     elif mode == '2':
-        print("Here is a list of all of your voliers: \n")
-        for volier in zoo.voliers:
-            print(f'{volier.habitat} volier: {volier.status}')
-        # zoo.money += 100
+        if len(zoo.voliers) == 0:
+            print("You don't have any voliers yet :( \n")
+        else:
+            print("Here is a list of all of your voliers: \n")
+            for volier in zoo.voliers:
+                print(f'{volier.habitat} volier: {volier.status}')
+            print()
 
     elif mode == '3':
         choose = input("What do you want buy? Volier(1) or animal(2): ")
@@ -65,30 +68,45 @@ def cycle(zoo):
         if choose == '1':
             volier = Volier()
             volier.choose_volier(zoo)
-            # zoo.money += 100
 
         elif choose == '2':
             animal = Animal()
             animal = animal.choose_animal()
-            print(f"Animal price is {animal.price}. y - yes, n - no: ")
+            try:
+                print(f"Animal price is {animal.price}. y - yes, n - no: ")
+            except AttributeError:
+                cycle(zoo=zoo)
             
             answer = input()
             if answer == 'y':
-                print("You need a suitable volier for the animal. Let's choose one of yours")
-                free_voliers = []
-                for volier in zoo.voliers:
-                    if volier.status == 'free':
-                        free_voliers.append(volier)
-                for i in range(0, len(free_voliers)):
-                    print(f'{i + 1}.{free_voliers[i].habitat}')
-                number = input()
-                free_voliers[int(number) - 1].put_animal(animal, free_voliers[int(number) - 1], zoo, animal.price)
+                if zoo.check_money(animal.price):
+                    print("You need a suitable volier for the animal. Let's choose one of yours \n")
+                    free_voliers = []
+                    for volier in zoo.voliers:
+                        if volier.status == 'free':
+                            free_voliers.append(volier)
+                    if len(free_voliers) == 0:
+                        print("You don't have any free voliers for the animal! \n")
+                        pass
+                    else:
+                        for i in range(0, len(free_voliers)):
+                            print(f'{i + 1}.{free_voliers[i].habitat}')
+                        print()
+                        number = input()
+                        try:
+                            free_voliers[int(number) - 1].put_animal(animal, free_voliers[int(number) - 1], zoo, animal.price)
+                        except Exception:
+                            print("Incorrect value! \n")
+                            pass
+                else:
+                    pass
             if answer == 'n':
                 pass
-        # zoo.money += 100
+        
     elif mode == '4':
         print("Goodbye")
         exit()
+
     else:
         print("That is not a correct value. Try again \n")
         cycle(zoo=zoo)
@@ -107,7 +125,7 @@ def work_zoo(zoo):
 
 def main():
     zoo = Zoo()
-    print("Hello, this is your new zoo. Your level is 0, and you are given 1000$ for starting")
+    print("Hello, this is your new zoo. Your level is 0, and you are given 1010$ for starting")
 
     thread1 = threading.Thread(target=work_zoo, args=(zoo,))
     thread2 = threading.Thread(target=add_money, args=(zoo,))
