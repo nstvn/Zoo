@@ -91,7 +91,7 @@ class Wolf(Animal):
         self.habitat = 'Ground'
 
 
-class Jackal():
+class Jackal(Animal):
     def __init__(self):
         super().__init__()
         self.name = 'Jackal'
@@ -101,7 +101,7 @@ class Jackal():
         self.habitat = 'Ground'
 
 
-class Giraffe():
+class Giraffe(Animal):
     def __init__(self):
         super().__init__()
         self.name = 'Giraffe'
@@ -111,7 +111,7 @@ class Giraffe():
         self.habitat = 'Ground'
 
 
-class Octopus():
+class Octopus(Animal):
     def __init__(self):
         super().__init__()
         self.name = 'Octopus'
